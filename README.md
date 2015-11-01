@@ -1,2 +1,2 @@
-# hardware-hints
+# Hardware Hints
 Hardware Hints
