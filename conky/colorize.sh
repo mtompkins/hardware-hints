@@ -1,7 +1,7 @@
 #!/bin/bash
 
-MAX=$1
-MIN=$2
+MIN=$1
+MAX=$2
 TEMPERATURE=$3
 
 if [ "$TEMPERATURE" -lt "$MIN" ] ; then
