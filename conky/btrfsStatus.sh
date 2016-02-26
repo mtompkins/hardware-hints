@@ -14,7 +14,7 @@ IS_SRB_RUN=`grep -oP '(?<=\d\d:\d\d:\d\d,) not running' <<<$IS_SRB_ALL`
 if [[ "$IS_BAL_CHK" == "running" ]] ; then
 	BAL_ARR_SIZE=${#IS_BAL_ARR[@]}
 	RETURN="BTRFS Balancing ${IS_BAL_ARR[$BAL_ARR_SIZE-2]}"
-elif [[ "$IS_SRB_RUN" != "not running" ]] ; then
+elif [ "$IS_SRB_RUN" != "not running" ] ; then
 	echo SCRUBBING
 	BTR_USED=$($CHK_USED)
 	BTR_USED_ARR=($BTR_USED)
