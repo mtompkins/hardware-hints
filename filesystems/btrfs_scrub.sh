@@ -4,12 +4,13 @@ test -n "$DEVS" || DEVS=$(grep '\<btrfs\>' /proc/mounts | awk '{ print $1 }' | s
 for BTR_DIR in $DEVS
 do
 
+	#BTR_DIR="/mnt/volume"
 	CHK_SRB="btrfs scrub status $BTR_DIR"
 
 	IS_SRB_ALL=$($CHK_SRB)
-	IS_SRB_RUN=`grep -o 'not running\|finished' <<<$IS_SRB_ALL`
+	IS_SRB_RUN=`grep -o 'not running\|finished\|aborted' <<<$IS_SRB_ALL`
 
-	if [ "$IS_SRB_RUN" == "not running" -o "$IS_SRB_RUN" == "finished" ] ; then
+	if [ "$IS_SRB_RUN" == "not running" -o "$IS_SRB_RUN" == "finished" -o "$IS_SRB_RUN" == "aborted" ] ; then
 
 		CAP_HOSTNAME=`echo $HOSTNAME | tr [a-z] [A-Z]`
 		EMAIL_SUBJECT_PREFIX="$CAP_HOSTNAME BTRFS - "
