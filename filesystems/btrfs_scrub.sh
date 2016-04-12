@@ -45,6 +45,13 @@ fi
 		echo "--------------------------------------------------------------------------------" >> $TMP_EMAIL_TEXT
 		echo "BTRFS scrub job of $BTR_DIR finished on `date`" >> $TMP_EMAIL_TEXT
 		logger "BTRFS scrub job finished on $BTR_DIR"
+		
+		echo "" >> $TMP_EMAIL_TEXT
+		echo "" >> $TMP_EMAIL_TEXT
+		echo "BTRFS Device Stats Post Scrub" >> $TMP_EMAIL_TEXT
+		echo "--------------------------------------------------------------------------------" >> $TMP_EMAIL_TEXT
+		btrfs dev stats -z $BTR_DIR >> $TMP_EMAIL_TEXT
+		echo "--------------------------------------------------------------------------------" >> $TMP_EMAIL_TEXT
 
 		mail -s "$(echo -e "$EMAIL_SUBJECT_PREFIX Scrub Job Completed\nContent-Type: text/html")" root < $TMP_EMAIL_TEXT 
 		
