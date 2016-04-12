@@ -1,10 +1,23 @@
 #!/bin/bash
 
-test -n "$DEVS" || DEVS=$(grep '\<btrfs\>' /proc/mounts | awk '{ print $1 }' | sort -u)
-for BTR_DIR in $DEVS
-do
+which btrfs >/dev/null || exit 0
+export PATH=/usr/local/bin:/sbin:$PATH
 
-	#BTR_DIR="/mnt/volume"
+# bash shortcut for `basename $0`
+PROG=${0##*/}
+lock=/var/run/$PROG
+
+if ! shlock -p $$ -f $lock; then
+    logger "BTRFS: $lock held; not starting a new instance."
+    exit
+fi
+
+#test -n "$DEVS" || DEVS=$(grep '\<btrfs\>' /proc/mounts | awk '{ print $1 }' | sort -u)
+#for BTR_DIR in $DEVS
+#do
+
+	BTR_DIR="/mnt/volume"
+
 	CHK_SRB="btrfs scrub status $BTR_DIR"
 
 	IS_SRB_ALL=$($CHK_SRB)
@@ -38,9 +51,11 @@ do
 		rm -f $TMP_EMAIL_TEXT
 
 	else
-		logger "Active BTRFS scrub detected on $BTR_DIR. Not starting a new instance."
+		logger "BTRFS: Active scrub detected on $BTR_DIR. Not starting a new instance."
 	fi
 
-done
+#done
+
+rm $lock
 
 exit 0;
