@@ -13,3 +13,10 @@ This repository uses submodules
 ```
 git clone --recursive https://github.com/mtompkins/hardware-hints.git
 ```
+
+## Update ##
+The submodules require an extra step
+```
+git pull
+git submodule update --remote --merge
+```
