@@ -1,3 +1,6 @@
 [submodule "wireless-info"]
 	path = wireless-info
 	url = https://github.com/UbuntuForums/wireless-info.git
+[submodule "voip-info"]
+	path = voip-info
+	url = https://gist.github.com/3636b1d403f982d4d67c114d48584dea.git
