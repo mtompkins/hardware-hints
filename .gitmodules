@@ -1,0 +1,3 @@
+[submodule "wireless-info"]
+	path = wireless-info
+	url = https://github.com/UbuntuForums/wireless-info.git
