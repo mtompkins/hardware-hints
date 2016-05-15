@@ -1,7 +1,5 @@
 # Filesystems #
-Filesystem maintenance utilities and scripts
+Filesystem relevant utilities and scripts
 
 ## Descriptions ##
-- `btrfs_scrub.sh` A script to automate `btrfs` user-space `scrub` maintenance. Works well with `systemd` timers for automating monthly maintenance.
-
-Note: The script makes use of [shlock](http://linux.die.net/man/1/shlock). If your distro does not have it, it is part of the Linux `inn` package.
+[BTRFS](./BTRFS) is a new copy on write (CoW) filesystem for Linux aimed at implementing advanced features while focusing on fault tolerance, repair and easy administration. Jointly developed at multiple companies, Btrfs is licensed under the GPL and open for contribution from anyone. Not too many companies have said that they are using Btrfs in production, but we welcome those who can say so on the production users page.

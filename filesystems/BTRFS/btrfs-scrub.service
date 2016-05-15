@@ -1,0 +1,6 @@
+[Unit]
+Description=Run btrfs scrub on filesystem
+
+[Service]
+Type=simple
+ExecStart=/opt/btrfsScripts/btrfs_scrub.sh
