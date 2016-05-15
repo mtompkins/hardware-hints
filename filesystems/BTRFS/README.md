@@ -2,11 +2,9 @@
 
 # Maintenance utilities and scripts for the BTRFS file system
 
->BTRFS is **under heavy development** and as such users of the filesystem 
-are urged (read: required) to stay as close to the most recent mainline kernel 
-release as possible. I advocate for this approach. The utilities and scripts 
-provided below are on my systems. Shields at the top of this
-README will indicate what kernel I am on and the script's status.
+>BTRFS is **under heavy development** and as such users of the filesystem are urged (read: required) to stay as close to the most recent kernel 
+release as possible. I advocate for this approach and target `stable`. The utilities and scripts provided below are on my systems.
+Shields at the top of this README indicate what kernel I am on and the script's status based on my experience.
 >
 > If you want to update your kernel, these [scripts](https://github.com/mtompkins/linux-kernel-utilities) may be useful.
 
