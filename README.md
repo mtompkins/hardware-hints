@@ -1,4 +1,4 @@
-# Hardware Hints #
+# Hardware Hints
 A collection of handy information for various relevant hardware components.
 
 ## Sections ##
