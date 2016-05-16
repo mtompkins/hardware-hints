@@ -1,6 +1,6 @@
 ![emblem](https://img.shields.io/badge/project-passive-lightgrey.svg) ![emblem](https://img.shields.io/badge/kernel-4.5.4-brightgreen.svg) ![emblem](https://img.shields.io/badge/btrfs--progs-4.5.3-brightgreen.svg)
 
-# Maintenance utilities and scripts for the BTRFS file system
+# Maintenance utilities and scripts for BTRFS
 
 >BTRFS is **under heavy development** and as such users of the filesystem are urged (read: required) to stay as close to the most recent kernel 
 release as possible. I advocate for this approach and target `stable`. The utilities and scripts provided below are on my systems.
