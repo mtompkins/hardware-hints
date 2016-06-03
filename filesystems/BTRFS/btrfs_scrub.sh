@@ -35,11 +35,7 @@ if [ "$IS_SRB_RUN" == "no stats available" -o "not running" -o "$IS_SRB_RUN" == 
 	echo "BTRFS scrub job of $BTR_DIR started on `date`" > $TMP_EMAIL_TEXT
 	echo "--------------------------------------------------------------------------------" >> $TMP_EMAIL_TEXT
 
-	#ionice -c 3 nice -10 btrfs scrub start -Bd $BTR_DIR
 	btrfs scrub start -Bd -c 2 $BTR_DIR
-	#btrfs scrub start -Bd -c 2 $BTR_DIR &
-	#wait $!
-	#wait
 
 	journalctl -q -k --since "$starttime" | grep BTRFS >> $TMP_EMAIL_TEXT
 

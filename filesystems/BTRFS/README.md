@@ -1,4 +1,4 @@
-![emblem](https://img.shields.io/badge/project-passive-lightgrey.svg) ![emblem](https://img.shields.io/badge/kernel-4.5.4-brightgreen.svg) ![emblem](https://img.shields.io/badge/btrfs--progs-4.5.3-brightgreen.svg)
+![emblem](https://img.shields.io/badge/project-passive-lightgrey.svg) ![emblem](https://img.shields.io/badge/kernel-4.6.0-brightgreen.svg) ![emblem](https://img.shields.io/badge/btrfs--progs-4.5.3-brightgreen.svg)
 
 # Maintenance utilities and scripts for BTRFS
 
