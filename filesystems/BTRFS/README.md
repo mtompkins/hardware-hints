@@ -1,5 +1,8 @@
 ![emblem](https://img.shields.io/badge/project-passive-lightgrey.svg) ![emblem](https://img.shields.io/badge/kernel-4.6.0-brightgreen.svg) ![emblem](https://img.shields.io/badge/btrfs--progs-4.5.3-brightgreen.svg)
 
+#[UPDATE 8-3-16] Removal of BTRFS
+As per the notice provided by the BTRFS developers on the mailing list and in consideration of the recommendation that raid 5/6 is now negatively recommended, at this time I will be decommissioning all BTRFS filesystems. This folder will be maintained for future use in its current state.
+
 # Maintenance utilities and scripts for BTRFS
 
 >BTRFS is **under heavy development** and as such users of the filesystem are urged (read: required) to stay as close to the most recent kernel 
