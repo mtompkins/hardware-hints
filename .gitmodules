@@ -4,3 +4,6 @@
 [submodule "voip-info"]
 	path = voip-info
 	url = https://gist.github.com/3636b1d403f982d4d67c114d48584dea.git
+[submodule "processor/pstate-frequency"]
+	path = processor/pstate-frequency
+	url = https://github.com/pyamsoft/pstate-frequency.git
